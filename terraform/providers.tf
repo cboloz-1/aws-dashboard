@@ -10,7 +10,6 @@ terraform {
     key     = "aws-dashboard/terraform.tfstate"
     region  = "us-east-1"
     encrypt = true
-    profile = "default"
   }
 }
 
