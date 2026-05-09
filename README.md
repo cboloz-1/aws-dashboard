@@ -10,6 +10,10 @@ A CI/CD pipeline and live infrastructure monitoring dashboard built on AWS. Ever
 
 ![Pipeline Success](screenshots/pipeline-success.png)
 
+## Email Notification
+
+![SNS Success Email](screenshots/sns-success.png)
+
 ## CloudWatch Integration
 
 ![CloudWatch Connected](screenshots/cloudwatch-connection.png)
