@@ -55,11 +55,15 @@ jobs:
 
       - name: Terraform Plan
         working-directory: ${{ env.TF_WORKING_DIR }}
+        env:
+          TF_VAR_public_key: ${{ secrets.AWS_PUBLIC_KEY }}
         run: terraform plan -no-color
         continue-on-error: false
 
       - name: Terraform Apply
         working-directory: ${{ env.TF_WORKING_DIR }}
+        env:
+          TF_VAR_public_key: ${{ secrets.AWS_PUBLIC_KEY }}
         run: terraform apply -auto-approve -no-color
 
       - name: Notify success

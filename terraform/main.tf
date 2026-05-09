@@ -5,7 +5,7 @@ locals {
 # Key Pair
 resource "aws_key_pair" "deployer" {
     key_name = local.hostname
-    public_key = file("./aws-dashboard.pub")
+    public_key = "var.public_key"
 }
 
 # VPC
