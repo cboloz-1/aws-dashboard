@@ -51,6 +51,8 @@ jobs:
 
       - name: Terraform Init
         working-directory: ${{ env.TF_WORKING_DIR }}
+        env:
+          TF_VAR_public_key: ${{ secrets.AWS_PUBLIC_KEY }}
         run: terraform init
 
       - name: Terraform Plan
