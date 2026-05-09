@@ -57,16 +57,17 @@ jobs:
 
       - name: Terraform Plan
         working-directory: ${{ env.TF_WORKING_DIR }}
-        env:
-          TF_VAR_public_key: ${{ secrets.AWS_PUBLIC_KEY }}
-        run: terraform plan -no-color
+        run: |
+          terraform plan -no-color \
+            -var="public_key=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7xfbRiOmRWvDzJ5HgosZsiYaYQtpL130HIgbkrzshv"
         continue-on-error: false
 
       - name: Terraform Apply
         working-directory: ${{ env.TF_WORKING_DIR }}
-        env:
-          TF_VAR_public_key: ${{ secrets.AWS_PUBLIC_KEY }}
-        run: terraform apply -auto-approve -no-color
+        run: |
+          terraform apply -auto-approve -no-color \
+            -var="public_key=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7xfbRiOmRWvDzJ5HgosZsiYaYQtpL130HIgbkrzshv"
+
 
       - name: Notify success
         if: success()
