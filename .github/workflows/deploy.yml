@@ -59,14 +59,14 @@ jobs:
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
           terraform plan -no-color \
-            -var="public_key=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7xfbRiOmRWvDzJ5HgosZsiYaYQtpL130HIgbkrzshv"
+            -var="public_key=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJc4gtw82pGbxPwgqciDMA/mgadwamWUPqfuHxlM626j"
         continue-on-error: false
 
       - name: Terraform Apply
         working-directory: ${{ env.TF_WORKING_DIR }}
         run: |
           terraform apply -auto-approve -no-color \
-            -var="public_key=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF7xfbRiOmRWvDzJ5HgosZsiYaYQtpL130HIgbkrzshv"
+            -var="public_key=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJc4gtw82pGbxPwgqciDMA/mgadwamWUPqfuHxlM626j"
 
 
       - name: Notify success
