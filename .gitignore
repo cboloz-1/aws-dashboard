@@ -1,0 +1,14 @@
+# SSH keys
+*.pem
+*.pub
+*_rsa
+*_ed25519
+terraform/aws-dashboard
+terraform/aws-dashboard.pub
+
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.backup
+terraform/terraform.tfvars
+terraform/.terraform.lock.hcl

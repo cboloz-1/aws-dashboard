@@ -1,0 +1,6 @@
+aws-dashboard
+aws-dashboard.pub
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
